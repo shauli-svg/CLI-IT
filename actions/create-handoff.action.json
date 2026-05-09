@@ -1,0 +1,30 @@
+{
+  "id": "create-handoff",
+  "label": "Create Handoff",
+  "clientLabel": "צור סיכום מעבר",
+  "description": "Creates a structured handoff from current project state and recent local runs.",
+  "risk": "low",
+  "inputs": {
+    "target": {
+      "type": "path",
+      "required": false
+    }
+  },
+  "outputs": {
+    "handoff": "markdown",
+    "result": "json"
+  },
+  "permissions": {
+    "readFiles": true,
+    "writeFiles": true,
+    "execute": false,
+    "network": false,
+    "deleteFiles": false,
+    "gitPush": false
+  },
+  "validation": [
+    "run_result_exists",
+    "handoff_exists",
+    "contains_past_present_next"
+  ]
+}

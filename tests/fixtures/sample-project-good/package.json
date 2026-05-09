@@ -1,0 +1,8 @@
+{
+  "name": "sample-project-good",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "node -e \"console.log('sample test pass')\"",
+    "ci": "npm test"
+  }
+}

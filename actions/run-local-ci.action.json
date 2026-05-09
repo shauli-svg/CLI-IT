@@ -1,0 +1,24 @@
+{
+  "id": "run-local-ci",
+  "label": "Run Local CI",
+  "clientLabel": "הרץ בדיקות מקומיות",
+  "description": "Runs the local CI pipeline and writes a CI run envelope.",
+  "risk": "medium",
+  "inputs": {},
+  "outputs": {
+    "ciSummary": "markdown",
+    "result": "json"
+  },
+  "permissions": {
+    "readFiles": true,
+    "writeFiles": true,
+    "execute": true,
+    "network": false,
+    "deleteFiles": false,
+    "gitPush": false
+  },
+  "validation": [
+    "ci_result_exists",
+    "all_ci_checks_pass_or_reported"
+  ]
+}

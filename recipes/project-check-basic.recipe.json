@@ -1,0 +1,17 @@
+{
+  "id": "project-check-basic",
+  "action": "check-project",
+  "target": "project-folder",
+  "method": "file-system",
+  "steps": [
+    "detect_project_files",
+    "read_package_json",
+    "summarize_structure",
+    "write_report"
+  ],
+  "validation": [
+    "target_exists",
+    "report_exists",
+    "summary_exists"
+  ]
+}
