@@ -1,0 +1,16 @@
+{
+  "id": "handoff-basic",
+  "action": "create-handoff",
+  "target": "workspace",
+  "method": "artifact-store",
+  "steps": [
+    "read_recent_runs",
+    "read_docs_status",
+    "compose_past_present_next",
+    "write_handoff"
+  ],
+  "validation": [
+    "handoff_exists",
+    "contains_past_present_next"
+  ]
+}

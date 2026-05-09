@@ -1,0 +1,18 @@
+{
+  "name": "cli-it",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local-first action runtime MVP for turning intent into validated work.",
+  "type": "commonjs",
+  "scripts": {
+    "ci:local": "node scripts/ci-local.js",
+    "validate:actions": "node scripts/validate-actions.js",
+    "smoke": "node scripts/smoke-run.js",
+    "scan:old-paths": "node scripts/old-path-scan.js",
+    "ui": "node src/ui/server.js",
+    "actions": "node src/cli.js list-actions"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

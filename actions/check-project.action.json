@@ -1,0 +1,31 @@
+{
+  "id": "check-project",
+  "label": "Check Project",
+  "clientLabel": "בדוק את הפרויקט",
+  "description": "Detects project basics, validates common files, and creates a project status report.",
+  "risk": "low",
+  "inputs": {
+    "target": {
+      "type": "path",
+      "required": true
+    }
+  },
+  "outputs": {
+    "report": "markdown",
+    "result": "json"
+  },
+  "permissions": {
+    "readFiles": true,
+    "writeFiles": true,
+    "execute": false,
+    "network": false,
+    "deleteFiles": false,
+    "gitPush": false
+  },
+  "validation": [
+    "run_result_exists",
+    "report_exists",
+    "target_exists",
+    "summary_exists"
+  ]
+}

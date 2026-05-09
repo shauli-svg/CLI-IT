@@ -1,0 +1,54 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CLI-IT</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <div class="eyebrow">Local Action Runtime</div>
+      <h1>Turn intent into verified work.</h1>
+      <p>Choose the work. CLI-IT handles actions, evidence, validation, and handoff.</p>
+    </section>
+
+    <section class="panel">
+      <div class="section-head">
+        <h2>What do you want to do?</h2>
+        <span id="system-status">Connecting…</span>
+      </div>
+      <div id="action-cards" class="cards"></div>
+    </section>
+
+    <section class="split">
+      <section class="panel result-panel">
+        <h2>Latest result</h2>
+        <div id="latest-result" class="empty-state">No action run from the interface yet.</div>
+      </section>
+
+      <section class="panel runs-panel">
+        <h2>Recent runs</h2>
+        <div id="recent-runs" class="run-list"></div>
+      </section>
+    </section>
+
+    <section class="panel detail-panel">
+      <h2>Run detail</h2>
+      <div id="run-detail" class="empty-state">Select a run to inspect evidence.</div>
+    </section>
+    <section class="status">
+      <h2>Current baseline</h2>
+      <ul>
+        <li>Local-first</li>
+        <li>No network by default</li>
+        <li>Every run creates evidence</li>
+        <li>Risk actions require approval by design</li>
+      </ul>
+    </section>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>
+

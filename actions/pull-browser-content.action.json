@@ -1,0 +1,31 @@
+{
+  "id": "pull-browser-content",
+  "label": "Pull Browser Content",
+  "clientLabel": "משוך תוכן מדף",
+  "description": "Extracts readable content from a saved browser HTML fixture and stores an artifact bundle.",
+  "risk": "low",
+  "inputs": {
+    "input": {
+      "type": "file",
+      "required": true
+    }
+  },
+  "outputs": {
+    "extractedContent": "json",
+    "report": "markdown"
+  },
+  "permissions": {
+    "readFiles": true,
+    "writeFiles": true,
+    "execute": false,
+    "network": false,
+    "deleteFiles": false,
+    "gitPush": false
+  },
+  "validation": [
+    "run_result_exists",
+    "report_exists",
+    "extracted_text_not_empty",
+    "artifact_exists"
+  ]
+}

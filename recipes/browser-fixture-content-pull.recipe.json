@@ -1,0 +1,17 @@
+{
+  "id": "browser-fixture-content-pull",
+  "action": "pull-browser-content",
+  "target": "saved-html",
+  "method": "browser-fixture",
+  "steps": [
+    "read_html_file",
+    "strip_scripts_styles",
+    "extract_title",
+    "extract_text",
+    "write_artifacts"
+  ],
+  "validation": [
+    "extracted_text_not_empty",
+    "artifact_exists"
+  ]
+}
